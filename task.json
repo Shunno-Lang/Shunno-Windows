@@ -1,0 +1,18 @@
+{
+	"name": "Shunno Compiler",
+	"version": "1.0.0",
+	"tasks": [
+		{
+			"label": "Build Lexer",
+			"type": "shell",
+			"command": "flex",
+			"args": ["src/shunno_lexer.l"]
+		},
+		{
+			"label": "Build Parser",
+			"type": "shell",
+			"command": "bison",
+			"args": ["-d", "src/shunno_parser.y"]
+		}
+	]
+}
